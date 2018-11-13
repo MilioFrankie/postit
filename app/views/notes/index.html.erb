@@ -1,5 +1,19 @@
 <h1>Notes</h1>
 <% @notes.each do |note| %>
-  <h2> <%= note.title %> </h2>
+  <h2><%= note.title %></h2>
   <%= link_to 'Show Note', note_path(note) %>
+<% end %>
+
+<h1> Notes </h1>
+<p><%= link_to 'New Note', new_note_path %></p>
+
+<%= link_to 'Edit note', edit_note_path(note) %>
+
+<h1> Notes </h1>
+<p><%= link_to 'New Note', new_note_path %></p>
+<% @notes.each do |note| %>
+  ...
+  <%= link_to 'Show Note', page_path(page) %>
+  <%= link_to 'Edit Note', edit_note_path(note) %>
+  <%= link_to 'Destroy Note', Note, method: :delete %>
 <% end %>
